@@ -2,6 +2,8 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+Credits to https://www.codevertiser.com/quiz-app-using-reactjs/.
+
 ## Available Scripts
 
 In the project directory, you can run:
