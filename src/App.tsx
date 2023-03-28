@@ -3,10 +3,11 @@ import { getRandomQuestions } from './questions';
 import './App.css';
 
 
-const questions = getRandomQuestions();
+const QUESTIONS_COUNT = 10;
 
 
 const App = () => {
+  const [questions, setQuestions] = useState(getRandomQuestions(QUESTIONS_COUNT));
   const [activeQuestionIdx, setActiveQuestionIdx] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const [showResult, setShowResult] = useState(false)
@@ -26,13 +27,21 @@ const App = () => {
     ]);
 
     setSelectedAnswer('');
-    
+
     if (activeQuestionIdx !== questions.length - 1) {
       setActiveQuestionIdx((prev: number) => prev + 1);
     } else {
       setShowResult(true);
     }
   }
+
+  const onClickRestart = () => {
+    setQuestions(getRandomQuestions(QUESTIONS_COUNT));
+    setActiveQuestionIdx(0);
+    setSelectedAnswer('');
+    setShowResult(false);
+    setResults([]);
+  };
 
   return (
     <div className="quiz-container">
@@ -79,6 +88,9 @@ const App = () => {
               <img src={imageUrl} alt="" style={{maxWidth: '100%'}}/>
             </div>
             ))}
+            <div style={{textAlign: 'center'}}>
+              <button style={{marginTop: '30px'}} onClick={onClickRestart}>Riprova</button>
+            </div>
         </div>
       )}
     </div>

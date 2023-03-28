@@ -32,4 +32,4 @@ export const getRandomQuestions = (count: number = 10, answerChoices: number = 4
             imageUrl: `${process.env.PUBLIC_URL}/species/${slugify(correctAnswer)}/${Math.floor(Math.random() * 5) + 1}.jpg`
         })
     )
-);
+).slice(0, count);
