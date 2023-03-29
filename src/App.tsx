@@ -51,7 +51,7 @@ const App = () => {
             <span className="active-question-no">{activeQuestionIdx + 1}</span>
             <span className="total-question">/{questions.length}</span>
           </div>
-          <img src={imageUrl} alt="" style={{maxWidth: '100%'}}/>
+          <img src={imageUrl} alt="" style={{ maxWidth: '100%' }} />
           <ul>
             {choices.map((answer: string) => (
               <li
@@ -74,23 +74,23 @@ const App = () => {
         <div className="result">
           <h3>Risultato: {questions.length - results.filter(({ isCorrectAnswer }) => !isCorrectAnswer).length} / {questions.length}</h3>
           {results.map(({ isCorrectAnswer, correctAnswer, userAnswer, imageUrl }, questionIdx) => (
-             <div>
-              <p style={{textDecoration: 'underline'}}>Domanda {questionIdx + 1}</p>
+            <div>
+              <p style={{ textDecoration: 'underline' }}>Domanda {questionIdx + 1}</p>
               {isCorrectAnswer ? (
-                  <p>La tua risposta: <span style={{color: 'green'}}>{userAnswer}</span></p>
-                ) : (
-                  <div>
-                    <p>La tua risposta: <span style={{color: 'red'}}>{userAnswer}</span></p>
-                    <p>Risposta corretta: <span style={{color: 'green'}}>{correctAnswer}</span></p>
-                  </div>
-                )
+                <p>La tua risposta: <span style={{ color: 'green' }}>{userAnswer}</span></p>
+              ) : (
+                <div>
+                  <p>La tua risposta: <span style={{ color: 'red' }}>{userAnswer}</span></p>
+                  <p>Risposta corretta: <span style={{ color: 'green' }}>{correctAnswer}</span></p>
+                </div>
+              )
               }
-              <img src={imageUrl} alt="" style={{maxWidth: '100%'}}/>
+              <img src={imageUrl} alt="" style={{ maxWidth: '100%' }} />
             </div>
-            ))}
-            <div style={{textAlign: 'center'}}>
-              <button style={{marginTop: '30px'}} onClick={onClickRestart}>Riprova</button>
-            </div>
+          ))}
+          <div style={{ textAlign: 'center' }}>
+            <button style={{ marginTop: '30px' }} onClick={onClickRestart}>Riprova</button>
+          </div>
         </div>
       )}
     </div>
