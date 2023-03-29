@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/quiz-specie-cacciabili-fvg/static/css/main.4d0983ca.css",
-    "main.js": "/quiz-specie-cacciabili-fvg/static/js/main.5654080b.js",
+    "main.js": "/quiz-specie-cacciabili-fvg/static/js/main.c1f537e7.js",
     "static/js/787.08bf5a43.chunk.js": "/quiz-specie-cacciabili-fvg/static/js/787.08bf5a43.chunk.js",
     "index.html": "/quiz-specie-cacciabili-fvg/index.html",
     "main.4d0983ca.css.map": "/quiz-specie-cacciabili-fvg/static/css/main.4d0983ca.css.map",
-    "main.5654080b.js.map": "/quiz-specie-cacciabili-fvg/static/js/main.5654080b.js.map",
+    "main.c1f537e7.js.map": "/quiz-specie-cacciabili-fvg/static/js/main.c1f537e7.js.map",
     "787.08bf5a43.chunk.js.map": "/quiz-specie-cacciabili-fvg/static/js/787.08bf5a43.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4d0983ca.css",
-    "static/js/main.5654080b.js"
+    "static/js/main.c1f537e7.js"
   ]
 }
